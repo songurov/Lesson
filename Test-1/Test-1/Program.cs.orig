@@ -10,8 +10,10 @@ namespace Test_1
     {
         static void Main(string[] args)
         {
+
             Commodity cmd = new Commodity();
             cmd.name = "Jacobs";
+            
             cmd.Cost = 12.3f;
             Console.WriteLine("Suma in parte pentru un cofe: "+cmd.Cost);
             Console.WriteLine("Suma cafe '"+cmd.name+"' este: " + cmd.GetCost());
