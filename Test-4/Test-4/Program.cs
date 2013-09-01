@@ -17,8 +17,8 @@ namespace Test_4
             Console.ReadLine();
         
             car.PunkingWheels();
-            car.Zapasca.Punking(2202);
-            Console.WriteLine("{0} === {1}",car.Zapasca.diametru,car.Zapasca.presshe);
+            //car.Zapasca.Punking(2202);
+            Console.WriteLine("{0} === {1} === {2}",car.Zapasca.diametru,car.Zapasca.presshe,car.PresureInWheels);
             Console.ReadLine();
         }
     }
@@ -42,17 +42,24 @@ namespace Test_4
     class Car
     {
         private Zapasca zapasca = new Zapasca();
+        
         private short presureInWheels;
 
         public void PunkingWheels()
         {
-            presureInWheels = 2000;
+            PresureInWheels = 2000;
             zapasca.Punking(2100);
         }
         public Zapasca Zapasca
         {
             get { return zapasca; }
             set { zapasca = value; }
+        }
+
+        public short PresureInWheels
+        {
+            get { return presureInWheels; }
+            set { presureInWheels = value; }
         }
     }
 }
