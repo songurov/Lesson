@@ -10,7 +10,49 @@ namespace Test_4
     {
         static void Main(string[] args)
         {
+            Car car = new Car();
 
+            
+            Console.WriteLine("{0}  --  {1}",car.Zapasca.presshe,car.Zapasca.diametru);
+            Console.ReadLine();
+        
+            car.PunkingWheels();
+            car.Zapasca.Punking(2202);
+            Console.WriteLine("{0} === {1}",car.Zapasca.diametru,car.Zapasca.presshe);
+            Console.ReadLine();
+        }
+    }
+
+    class Zapasca
+    {
+        public byte diametru;
+        public short presshe;
+
+        public Zapasca()
+        {
+            diametru = 30;
+            presshe = 2100;
+        }
+        public void Punking(short press)
+        {
+            this.presshe = press;
+        }
+    }
+
+    class Car
+    {
+        private Zapasca zapasca = new Zapasca();
+        private short presureInWheels;
+
+        public void PunkingWheels()
+        {
+            presureInWheels = 2000;
+            zapasca.Punking(2100);
+        }
+        public Zapasca Zapasca
+        {
+            get { return zapasca; }
+            set { zapasca = value; }
         }
     }
 }
