@@ -10,6 +10,32 @@ namespace Test_6
     {
         static void Main(string[] args)
         {
+            B b = new B();
+            C c = new C();
+
+            Metoda(b);
+            Metoda(c);
         }
+
+        static void Metoda(A input)
+        {
+            Console.WriteLine("A fost initializat {0}",input.ToString());
+            Console.ReadLine();
+        }
+    }
+
+    class A
+    {
+        public int x;
+    }
+
+    class B:A
+    {
+         
+    }
+
+    class C:A
+    {
+         
     }
 }
